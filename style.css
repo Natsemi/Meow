@@ -1235,3 +1235,26 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    width: 54px; /* ลดความกว้างให้น้อยลง */
+    min-width: 54px;
+    max-width: 54px;
+    padding: 10px 0;
+  }
+  .sidebar:hover { width: 54px !important; } /* ป้องกัน hover ขยายบนมือถือ */
+  .sidebar nav { gap: 12px; }
+  .main-content {
+    margin-left: 54px !important; /* ปรับ margin-content ให้พอดีกับ sidebar */
+    padding: 8px 0 0 0;
+  }
+  .nav-link .label {
+    display: none !important; /* ซ่อน label เพื่อประหยัดพื้นที่ */
+    opacity: 0 !important;
+  }
+  .logo-img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
