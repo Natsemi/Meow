@@ -52,12 +52,12 @@ body {
   66% { transform: translate(50px, 20px) rotate(240deg); }
 }
 
-/* Sidebar */
+/* Sidebar Desktop - แนวตั้งด้านซ้าย */
 .sidebar {
   position: fixed;
   left: 0;
   top: 0;
-  width: 80px;
+  width: 70px;
   height: 100vh;
   background: rgba(15, 15, 25, 0.95);
   backdrop-filter: blur(10px);
@@ -65,59 +65,59 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 15px 0;
   z-index: 1000;
   transition: width 0.3s ease;
 }
 
 .sidebar:hover {
-  width: 200px;
+  width: 180px;
 }
 
 .logo {
-  font-size: 32px;
-  margin-bottom: 40px;
+  font-size: 28px;
+  margin-bottom: 30px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .logo-img {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 10px;
   display: block;
   margin: 0 auto;
 }
 
 .logo-img.neon-glow {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 12px;
   background: none;
-  box-shadow: 0 0 30px #ff6ba9, 0 0 60px #6ec1e4;
+  box-shadow: 0 0 20px #ff6ba9, 0 0 40px #6ec1e4;
   animation: neonpulse 1.5s alternate infinite;
 }
 
 @keyframes neonpulse {
-  0% { box-shadow: 0 0 10px #ff6ba9, 0 0 18px #6ec1e4; }
-  60% { box-shadow: 0 0 40px #ff6ba9, 0 0 55px #6ec1e4; }
-  100% { box-shadow: 0 0 24px #ff6ba9, 0 0 60px #6ec1e4; }
+  0% { box-shadow: 0 0 8px #ff6ba9, 0 0 14px #6ec1e4; }
+  60% { box-shadow: 0 0 30px #ff6ba9, 0 0 45px #6ec1e4; }
+  100% { box-shadow: 0 0 20px #ff6ba9, 0 0 50px #6ec1e4; }
 }
 
 .sidebar nav {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   width: 100%;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px 20px;
+  gap: 12px;
+  padding: 12px 15px;
   color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.3s ease;
@@ -149,17 +149,17 @@ body {
 }
 
 .nav-link .icon {
-  font-size: 24px;
-  min-width: 40px;
+  font-size: 20px;
+  min-width: 32px;
   text-align: center;
 }
 
 .sidebar-icon-img {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   object-fit: cover;
   margin-right: 2px;
-  border-radius: 12px;
+  border-radius: 10px;
   transition: transform 0.3s, filter 0.3s;
 }
 
@@ -181,7 +181,7 @@ body {
 
 /* Main Content */
 .main-content {
-  margin-left: 100px;
+  margin-left: 70px;
   min-height: 100vh;
   padding: 0;
 }
@@ -390,7 +390,7 @@ body {
   50% { transform: translateY(-10px); }
 }
 
-/* Card Grid & Icon Size = 64x64px */
+/* Card Grid */
 .card-grid {
   display: flex;
   flex-direction: column;
@@ -523,7 +523,7 @@ body {
   box-shadow: 0 0 30px #ff6ba9aa, 0 0 50px #6ec1e4aa;
 }
 
-/* Gmail Card - อนุญาตให้คัดลอกข้อความได้ */
+/* Gmail Card */
 .gmail-card * {
   user-select: text !important;
   -webkit-user-select: text !important;
@@ -535,7 +535,6 @@ body {
   cursor: text;
 }
 
-/* Card อื่น ๆ - ป้องกันการคัดลอก */
 .content-card:not(.gmail-card) * {
   user-select: none;
   -webkit-user-select: none;
@@ -543,86 +542,13 @@ body {
   -ms-user-select: none;
 }
 
-/* Bottom Bar & Responsive */
-@media (max-width: 1920px) {
-  .sidebar {
-    display: none;
-  }
-  
-  .bottom-bar {
-    position: fixed;
-    left: 0; right: 0; bottom: 0;
-    width: 100vw;
-    height: 50px;
-    background: rgba(15, 15, 25, 0.95);
-    border-top: 1px solid rgba(255,255,255,0.12);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    box-shadow: 0 -4px 30px rgba(0,0,0,0.6);
-  }
-  
-  .bottom-bar nav {
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .bar-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    text-decoration: none;
-    color: #b8b8d1;
-    font-size: 11px;
-    border-radius: 10px;
-    padding: 4px 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .bar-link.active,
-  .bar-link:hover {
-    background: rgba(255,107,169,0.12);
-    color: #fff;
-    transform: translateY(-2px);
-  }
-  
-  .bar-logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 0 16px #ff6ba9, 0 0 24px #6ec1e4;
-  }
-  
-  .bar-icon {
-    width: 26px;
-    height: 26px;
-    border-radius: 6px;
-    object-fit: cover;
-    margin-bottom: 1px;
-  }
-  
-  .bar-label {
-    font-weight: 600;
-    text-align: center;
-  }
-  
-  .main-content {
-    margin-left: 0 !important;
-    margin-bottom: 60px;
-  }
-}
-
-/* Footer */
+/* Footer - Desktop */
 .footer {
   background: rgba(10, 10, 20, 0.95);
   border-top: 1px solid rgba(255, 107, 169, 0.3);
   padding: 120px 20px 60px;
   margin-top: 100px;
+  margin-left: 70px;
 }
 
 .footer-container {
@@ -985,36 +911,77 @@ body {
   color: var(--secondary-color);
 }
 
-/* Mobile Responsive */
+/* Mobile - Bottom Bar */
 @media (max-width: 768px) {
-  .sidebar { display: none !important; }
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: auto;
+    width: 100vw;
+    height: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0;
+    z-index: 2000;
+  }
+  
+  .sidebar:hover {
+    width: 100vw;
+  }
+  
+  .logo {
+    display: none;
+  }
+  
+  .sidebar nav {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav-link {
+    flex-direction: column;
+    gap: 3px;
+    padding: 8px 12px;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border-radius: 10px;
+  }
+  
+  .nav-link::before {
+    display: none;
+  }
+  
+  .sidebar-icon-img {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+  }
+  
+  .nav-link .label {
+    opacity: 1 !important;
+    font-size: 10px;
+    font-weight: 600;
+  }
   
   .main-content {
     margin-left: 0 !important;
+    margin-bottom: 70px;
+  }
+  
+  .footer {
+    margin-left: 0;
     margin-bottom: 60px;
-    padding: 8px 0 0 0;
-  }
-  
-  .bottom-bar {
-    height: 55px;
-  }
-  
-  .bottom-bar nav {
-    gap: 40px;
-  }
-  
-  .bar-logo {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .bar-icon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .bar-label {
-    font-size: 10px;
+    padding: 80px 20px 40px;
   }
 
   .footer-container {
