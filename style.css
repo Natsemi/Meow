@@ -181,10 +181,11 @@ body {
 
 /* Main Content */
 .main-content {
-  margin-left: 80px;
+  margin-left: 100px;  /* เพิ่มจาก 80px เป็น 100px */
   min-height: 100vh;
   padding: 0;
 }
+
 
 /* Hero Banner */
 .hero-banner {
@@ -651,7 +652,7 @@ body {
   .sidebar { width: 60px; }
   .sidebar:hover { width: 60px; }
   .sidebar:hover .nav-link .label { opacity: 0; }
-  .main-content { margin-left: 60px; }
+  .main-content { margin-left: 70px; } /* เพิ่มจาก 60px เป็น 70px */
   .hero-banner { height: 180px; }
   .profile-card { margin: -80px 20px 30px; padding: 62px 18px 25px; }
   .avatar-wrapper { width: 110px; height: 110px; margin-top: -75px; }
@@ -1233,3 +1234,4 @@ body {
     height: 35px;
   }
 }
+
